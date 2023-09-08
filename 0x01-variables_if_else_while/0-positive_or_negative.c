@@ -1,26 +1,30 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
+
 /**
- * main - Start orentry point of the programm
+ * main - Starting point
  *
- * Descripition: print the value of n status(Positive,Negative,Zero)
+ * Description - Print value status of n (Positive, negative or zero)
  *
- * Return: its always 0 (Success)
+ * Return: is Always 0 (Success)
+ *
  */
+
 int main(void)
 {
-		int n;
+	int n;
 
-			srand(time(0));
-				n = rand() - RAND_MAX / 2;
-					/* additional code */
-				if (n > 0)
-					printf("%i is positive\n", n);
-				else if (n == 0)
-					printf("%i is zero\n", n);
-				else
-					printf("%i is negative\n", n);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/*My code*/
+	if (n > 0)
+		printf("%i is positive\n", n);
+	else if (n == 0)
+		printf("%i is zero\n", n);
+	else
+		printf("%i is negative\n", n);
 
-					return (0);
+	return (0);
 }
