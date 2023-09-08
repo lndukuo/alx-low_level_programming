@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet.
+ * main - Programs start poin
+ *
+ *Description - using putchar to print alphabets lower/upper case
  *
  * Return: Always 0 (Success)
  */
