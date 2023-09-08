@@ -3,28 +3,36 @@
 #include <stdio.h>
 
 /**
- * main - Starting point of programm
+ * main - Entry/starting point of program
  *
- * Description: Print the value of n status;(greater than, is zero and its not less than 6)
+ * Description: Randomly assing value to n whether(>5,<6 or 0)
  *
- * Return: Always 0 (Success)
+ * Return: always 0
  *
  */
 
 int main(void)
 {
-	int n, digit;
+	int n;
+	int x;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/*my code**/
-	digit = n % 10
-		if (digit > 5)
-			printf("Last digit of %i is %i and is greater than 5\n", n, digit);
-		else if (digit == 0)
-			printf("Last digit of %i is %i and is 0\n", n, digit);
-		else if (digit < 6 && digit != 0)
-			printf("Last digit of %i is %i and is less than 6 and not 0\n", n, digit);
 
+	x = n % 10;
+	printf("Last digit of %d is %d ", n, x);
+	if (x > 5)
+	{
+		printf("and is greater than 5");
+	}
+	if (x == 0)
+	{
+		printf("and is 0");
+	}
+	if (x < 6 && x != 0)
+	{
+		printf("and is less than 6 and not 0");
+	}
+	printf("\n");
 	return (0);
 }
