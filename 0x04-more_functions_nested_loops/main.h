@@ -1,5 +1,16 @@
 /**
  * contains prototypes of all functions used in this task
+ *
  */
-_putchar
+#ifndef MAIN_H
+#define MAIN_H
+
+
+int_putchar(char c);
 int _isupper(int c);
+int _isdigit(int c);
+
+
+
+
+#endif
