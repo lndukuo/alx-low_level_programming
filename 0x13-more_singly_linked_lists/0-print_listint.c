@@ -6,26 +6,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t count = 0;
+	size_t nodes_num = 0;
 
 	while (h != NULL)
 	{
-		if (h->n >= 0 && h->n <= 9)
-			_putchar(h->n + '0');
-		else if (h->n < 0)
-		{
-			_putchar('-');
-			_putchar((h->n * -1) / 10 + '0');
-			_putchar((h->n * -1) % 10 + '0');
-		}
-		else
-		{
-			_putchar(h->n / 10 + '0');
-			_putchar(h->n % 10 + '0');
-		}
-		_putchar('\n');
+		printf("%d\n", h->n);
 		h = h->next;
-		count++;
+		nodes_num++;
 	}
-	return (count);
+	return (nodes_num);
 }
