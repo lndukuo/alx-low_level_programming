@@ -10,7 +10,19 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		_putchar(h->n + '0');
+		if (h->n >= 0 && h->n <= 9)
+			_putchar(h->n + '0');
+		else if (h->n < 0)
+		{
+			_putchar('-');
+			_putchar((h->n * -1) / 10 + '0');
+			_putchar((h->n * -1) % 10 + '0');
+		}
+		else
+		{
+			_putchar(h->n / 10 + '0');
+			_putchar(h->n % 10 + '0');
+		}
 		_putchar('\n');
 		h = h->next;
 		count++;
